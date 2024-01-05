@@ -94,7 +94,7 @@ int main() {
               << "The purpose of this program is to visualise the Abstract Syntax Tree (AST)\n"
               << "of boolean algebra expressions\n"
               << "Simply type an expression and the generated AST will be visualised\n"
-              << "For example: \"ab + c + a!d ^ b*c\n"
+              << "For example: \"ab + c + a!d ^ b*c\"\n"
               << "For more information type help()\n"
               << "To quit type quit()\n";
     bool quit = false;
