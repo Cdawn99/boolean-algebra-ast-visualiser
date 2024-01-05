@@ -50,18 +50,19 @@ void move_operator(std::vector<char> &operator_stack, std::vector<char> &output_
 
 std::list<char> lexer(std::string &input) {
     std::list<char> token_stream;
+    bool potential_and = false;
     for (size_t i = 0; i < input.length(); i++) {
         char token = input[i];
         if (token == ' ') {
             continue;
         }
-        token_stream.push_back(token);
-        if (i+1 != input.length()
-            && (std::isalpha(token) || token == ')')
-            && (std::isalpha(input[i+1]) || input[i+1] == '!' || input[i+1] == '(')) {
+        if (potential_and && (std::isalpha(token) || token == '!' || token == '(')) {
             token_stream.push_back('*');
+            potential_and = false;
         }
-    }
+        token_stream.push_back(token);
+        potential_and = std::isalpha(token) || token == ')';
+   }
     return token_stream;
 }
 

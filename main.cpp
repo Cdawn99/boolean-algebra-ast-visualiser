@@ -7,12 +7,12 @@
 
 void display_help() {
     std::cout << "The boolean operators are:\n"
-              << "(, ) : Parentheses (0)\n"
               << "! : NOT(1)\n"
               << "* : AND(2)\n"
               << "+ : OR(3)\n"
               << "^ : XOR(3)\n"
-              << "The numbers correspond to their precedence with (0) being the highest and (3) being the lowest\n"
+              << "The numbers correspond to their precedence with (1) being the highest and (3) being the lowest\n"
+              << "Parentheses can be inserted to change the order of evaluation\n"
               << "OR and XOR are evaluated from left to right\n"
               << "a + b ^ c == (a + b) ^ c and a ^ b + c == (a ^ b) + c\n"
               << "The operator AND doesn't have to be explicitly typed in\n"
