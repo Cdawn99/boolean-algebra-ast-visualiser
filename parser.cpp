@@ -66,7 +66,7 @@ std::list<char> lexer(std::string &input) {
     return token_stream;
 }
 
-// Implementation of the Sunting yard algorighm:
+// Implementation of the Shunting yard algorighm:
 // https://en.wikipedia.org/wiki/Shunting_yard_algorithm
 std::vector<char> parser(std::list<char> &token_stream) {
     std::vector<char> output_stack;
